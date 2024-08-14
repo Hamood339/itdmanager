@@ -56,6 +56,29 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <createTable tableName="proffesseur">
+            <column name="id" type="long">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prenom" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="adresse" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telephone" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
 
         <addPrimaryKey columnNames="user_id, authority_name" tableName="jhi_user_authority"/>
 
