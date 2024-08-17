@@ -10,9 +10,7 @@ import { ProfileService } from './profile.service';
   selector: 'jhi-page-ribbon',
   template: `
     @if (ribbonEnv$ | async; as ribbonEnv) {
-      <div class="ribbon">
-        <a href="" [jhiTranslate]="'global.ribbon.' + (ribbonEnv ?? '')">{{ { dev: 'Développement' }[ribbonEnv ?? ''] }}</a>
-      </div>
+
     }
   `,
   styleUrl: './page-ribbon.component.scss',

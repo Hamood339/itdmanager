@@ -1,4 +1,28 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+
+
+@Component({
+  standalone: true,
+  selector: 'jhi-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss',
+  imports: [
+    NgOptimizedImage
+  ]
+
+})
+
+export  default class  NavbarComponent{
+  titre="Institut des Technologie du digital";
+
+  ngOnInit() {
+
+  }
+}
+
+
+/*import { Component, inject, signal, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -72,4 +96,4 @@ export default class NavbarComponent implements OnInit {
   toggleNavbar(): void {
     this.isNavbarCollapsed.update(isNavbarCollapsed => !isNavbarCollapsed);
   }
-}
+}*/

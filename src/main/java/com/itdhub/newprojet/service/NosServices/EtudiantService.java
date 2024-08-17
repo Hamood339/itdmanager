@@ -23,13 +23,27 @@ public class EtudiantService {
             new Etudiant(3, "sane", "malick", "Dakar", "sane45@gmail.com"),
             new Etudiant(4, "sene", "fatou", "Dakar", "fatou78@gmail.com")
         )
+
     );
 
     public List<Etudiant> getEtudiant() {
+        Etudiant etudiant=new Etudiant();
+        etudiant.setPrenom(etudiant.getPrenom());
+        etudiant.setNom(etudiant.getNom());
+        etudiant.setAdresse(etudiant.getAdresse());
+        etudiant.setEmail(etudiant.getEmail());
+        etudiantRepository.findAll();
         return etudiants;
+
     }
 
     public Etudiant getById(Long id) {
+        Etudiant etudiant=new Etudiant();
+        etudiant.setPrenom(etudiant.getPrenom());
+        etudiant.setNom(etudiant.getNom());
+        etudiant.setAdresse(etudiant.getAdresse());
+        etudiant.setEmail(etudiant.getEmail());
+      etudiantRepository.saveAll(etudiants);
         return etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
     }
 
@@ -37,16 +51,23 @@ public class EtudiantService {
         etudiants.removeIf(etudiants -> etudiants.getId() == id);
     }
 
-    public void addEtudiant() {
-        //etudiantRepository.save(etudiant);
+    public Etudiant addEtudiant() {
+        Etudiant etudiant=new Etudiant();
+        etudiant.setPrenom(etudiant.getPrenom());
+        etudiant.setNom(etudiant.getNom());
+        etudiant.setAdresse(etudiant.getAdresse());
+        etudiant.setEmail(etudiant.getEmail());
         etudiants.add(etudiant);
+        etudiantRepository.saveAll(etudiants);
+        return etudiant;
     }
 
-    public void updateEtudiant(Etudiant etudiant, long id) {
+    public Etudiant updateEtudiant(Etudiant etudiant, long id) {
         etudiants.forEach(etudiant1 -> {
             if (etudiant1.getId() == id) {
                 etudiants.set(etudiants.indexOf(etudiant1), etudiant);
             }
         });
+        return etudiant;
     }
 }
