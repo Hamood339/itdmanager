@@ -56,6 +56,29 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <createTable tableName="proffesseur">
+            <column name="id" type="bigint" autoIncrement="true" >
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="nom" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prenom" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="adresse" type="varchar(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="age" type="varchar(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="email" type="varchar(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="telephone" type="varchar(50)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
 
         <createTable tableName="etudiant">
             <column name="id" type="bigint">
