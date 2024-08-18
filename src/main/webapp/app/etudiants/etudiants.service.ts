@@ -21,9 +21,7 @@ export class EtudiantsService {
   }
 
   addEtudiant(etudiant:Etudiant):Observable<Etudiant>{
-    return this.httpClient.post<Etudiant>(this.url, etudiant, {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    });
+    return this.httpClient.post<Etudiant>(this.url, etudiant)
   }
 
 

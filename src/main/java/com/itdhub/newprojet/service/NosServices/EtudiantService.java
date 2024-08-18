@@ -27,23 +27,14 @@ public class EtudiantService {
     );
 
     public List<Etudiant> getEtudiant() {
-        Etudiant etudiant=new Etudiant();
-        etudiant.setPrenom(etudiant.getPrenom());
-        etudiant.setNom(etudiant.getNom());
-        etudiant.setAdresse(etudiant.getAdresse());
-        etudiant.setEmail(etudiant.getEmail());
-        etudiantRepository.findAll();
+
+       // etudiantRepository.findAll();
         return etudiants;
 
     }
 
     public Etudiant getById(Long id) {
-        Etudiant etudiant=new Etudiant();
-        etudiant.setPrenom(etudiant.getPrenom());
-        etudiant.setNom(etudiant.getNom());
-        etudiant.setAdresse(etudiant.getAdresse());
-        etudiant.setEmail(etudiant.getEmail());
-      etudiantRepository.saveAll(etudiants);
+    //etudiantRepository.saveAll(etudiants);
         return etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
     }
 
@@ -52,13 +43,8 @@ public class EtudiantService {
     }
 
     public Etudiant addEtudiant() {
-        Etudiant etudiant=new Etudiant();
-        etudiant.setPrenom(etudiant.getPrenom());
-        etudiant.setNom(etudiant.getNom());
-        etudiant.setAdresse(etudiant.getAdresse());
-        etudiant.setEmail(etudiant.getEmail());
         etudiants.add(etudiant);
-        etudiantRepository.saveAll(etudiants);
+      // etudiantRepository.saveAll(etudiants);
         return etudiant;
     }
 
