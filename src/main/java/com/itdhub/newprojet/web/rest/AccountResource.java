@@ -135,7 +135,7 @@ public class AccountResource {
     }
 
     /**
-     * {@code POST   /account/reset-password/init} : Send an email to reset the password of the user.
+     * {@code POST   /account/reset-password/init} : Send an e-mail to reset the password of the user.
      *
      * @param mail the mail of the user.
      */

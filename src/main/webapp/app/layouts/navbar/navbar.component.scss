@@ -4,10 +4,10 @@
 /* ==========================================================================
 Navbar
 ========================================================================== */
-
+/*
 .navbar-version {
   font-size: 0.65em;
-  color: $navbar-dark-color;
+  color: darkgoldenrod;
 }
 
 .profile-image {
@@ -21,16 +21,60 @@ Navbar
   a.nav-link {
     font-weight: 400;
   }
-}
+}*/
 
 /* ==========================================================================
 Logo styles
 ========================================================================== */
-.logo-img {
+/*.logo-img {
   height: 45px;
   width: 45px;
   display: inline-block;
   vertical-align: middle;
   background: url('/content/images/logo-jhipster.png') no-repeat center center;
   background-size: contain;
+}
+*/
+
+
+header {
+  background-color: #c99507;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  padding-inline: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.nav-logo{
+  height: 50px;
+  width: auto;
 }

@@ -3,30 +3,33 @@ package com.itdhub.newprojet.web.rest.NosControllers;
 import com.itdhub.newprojet.domain.NosClasses.Certifications;
 import com.itdhub.newprojet.service.NosServices.CertifsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/certifs")
 public class CertifsController {
 
     @Autowired
     private CertifsService certifsService;
 
-    @GetMapping("/api/certifs")
+    @GetMapping
     public List<Certifications> getCertifs() {
-        certifsService.getCertifs();
-        return getCertifs();
+       return certifsService.getCertifs();
+
     }
 
-    @PostMapping( "/api/certifs")
-    public void addCertifs(@RequestBody Certifications certifs) {
+    @PostMapping
+    public ResponseEntity<Certifications> addCertifs(@RequestBody Certifications certifs) {
         certifsService.addCertifsByName();
+        return ResponseEntity.ok(certifs);
     }
 
-    @PutMapping("/api/certifs/{name}")
-    public void updateCertifs(@RequestBody Certifications certifications, @PathVariable String name) {
-        certifsService.updateCertifs(certifications, name);
+    @PutMapping("/{encours}")
+    public Certifications updateCertifs(@RequestBody Certifications certifications, @PathVariable boolean encours) {
+        certifsService.updateCertifs(certifications, String.valueOf(encours));
+        return certifications;
     }
 }

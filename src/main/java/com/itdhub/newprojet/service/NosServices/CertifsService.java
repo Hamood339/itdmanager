@@ -21,25 +21,31 @@ public class CertifsService {
 
     private static ArrayList<Certifications> certifs = new ArrayList<>(
         Arrays.asList(
-            new Certifications(new Etudiant(),"IBM",true),
-            new Certifications(new Etudiant(),"RedHat",true)
+            new Certifications(new Etudiant(),"IBM",false),
+            new Certifications(new Etudiant(),"RedHat",true),
+            new Certifications(new Etudiant(),"CISCO",false)
         )
     );
 
     public List<Certifications> getCertifs() {
+      //  certificationsRepository.saveAll(certifs);
         return certifs;
     }
 
-    public void addCertifsByName() {
+    public Certifications addCertifsByName() {
         certifs.add(new Certifications(new Etudiant(), "CertifsName", true));
+       // certificationsRepository.save(new Certifications(new Etudiant(), "CertifsName", true));
+        return new Certifications();
     }
 
-    public void updateCertifs(Certifications certifications, String name) {
+    public Certifications updateCertifs(Certifications certifications, String name) {
         certifs.forEach(certifications1 -> {
             if (certifications1.getName() == name) {
                 certifs.set(certifs.indexOf(certifications1), certifications);
             }
         });
+       // certificationsRepository.save(certifications);
+        return certifications;
     }
 
 }
