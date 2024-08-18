@@ -1,8 +1,27 @@
-<nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-dark">
+
+<header>
+  <nav>
+    <div class="logo">
+      <h1>{{ titre }}</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="">Accueil</a></li>
+      <li><a routerLink="/about">À Propos</a></li>
+      <li><a routerLink="/services">Services</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+<!--nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
       <span class="logo-img"></span>
-      <span class="navbar-title" jhiTranslate="global.title">Newprojet</span>
+      <span class="navbar-title" jhiTranslate="global.title">Institut des Technologie du Digital</span>
       <span class="navbar-version">{{ version }}</span>
     </a>
     <a
@@ -26,9 +45,9 @@
               <span jhiTranslate="global.menu.home">Accueil</span>
             </span>
           </a>
-        </li>
+        </li>-->
         <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-        @if (account() !== null) {
+       <!-- @if (account() !== null) {
           <li
             ngbDropdown
             class="nav-item dropdown pointer"
@@ -42,9 +61,9 @@
                 <span jhiTranslate="global.menu.entities.main">Entités</span>
               </span>
             </a>
-            <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
+            <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">-->
               <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
-            </ul>
+          <!--  </ul>
           </li>
         }
         <li
@@ -73,9 +92,9 @@
                 <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
                 <span jhiTranslate="global.menu.entities.adminAuthority">Authority</span>
               </a>
-            </li>
+            </li>-->
             <!-- jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here -->
-            <li>
+           <!-- <li>
               <a class="dropdown-item" routerLink="/admin/user-management" routerLinkActive="active" (click)="collapseNavbar()">
                 <fa-icon icon="users" [fixedWidth]="true"></fa-icon>
                 <span jhiTranslate="global.menu.admin.userManagement">Gestion des utilisateurs</span>
@@ -222,4 +241,4 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav>-->
