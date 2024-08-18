@@ -14,24 +14,26 @@ import java.util.Optional;
 public class CourseController {
     @Autowired
     private  CourseService courseService ;
-    @RequestMapping(method = RequestMethod.GET, value = "/courses")
+    @RequestMapping(method = RequestMethod.GET, value = "")
     public List<Course> getCourses() {
         return courseService.getCourses();
     }
 
-    @RequestMapping("/course/{id}")
+    @RequestMapping("/{id}")
     public Optional<Course> getCourses(@PathVariable Long id) {
         return courseService.getCourse(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/course")
-    public void addCourse(@RequestBody Course course) {
-        courseService.addCourse(course);
+    public ResponseEntity <Course> addCourse(@RequestBody Course course) {
+      courseService.addCourse(course);
+      return ResponseEntity.ok(course);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/course/{id}")
-public void updateCourse(@RequestBody Course course, @PathVariable long id){
+public ResponseEntity<Course> updateCourse(@RequestBody Course course, @PathVariable long id){
          courseService.updateCourse(course, id);
+         return ResponseEntity.ok(course);
     }
     @RequestMapping(method = RequestMethod.DELETE, value = "/course/{id}")
     public void deleteCourse(@PathVariable Long id){

@@ -49,15 +49,13 @@ public class CourseService {
      * @param course Le cours mis à jour avec les nouvelles informations.
      * @param id L'ID du cours à mettre à jour.
      */
-    public void updateCourse(Course course, Long id) {
-        for (int i = 0; i < courses.size(); i++) {
-            Course c = courses.get(i);
-            if (c.getId().equals(id)) {
-                // Remplace l'ancien cours par le nouveau
-                courses.set(i, course);
-                return;
+    public Course updateCourse(Course course, long id) {
+        courses.forEach(cour1 -> {
+            if (cour1.getId() == id) {
+                courses.set(courses.indexOf(cour1), course);
             }
-        }
+        });
+        return course;
     }
 
     /**
