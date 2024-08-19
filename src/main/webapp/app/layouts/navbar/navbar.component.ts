@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,8 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterLink
   ]
 
 })

@@ -25,6 +25,7 @@ export class EtudiantsComponent implements OnInit{
    etudiant:FormGroup;
    constructor(private fb:FormBuilder) {
      this.etudiant=this.fb.group({
+       id:[length],
        prenom:[''],
        nom:[''],
        adresse:[''],

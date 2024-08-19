@@ -28,13 +28,13 @@ public class CertifsService {
     );
 
     public List<Certifications> getCertifs() {
-      //  certificationsRepository.saveAll(certifs);
+      // certificationsRepository.saveAll(certifs);
         return certifs;
     }
 
     public Certifications addCertifsByName() {
         certifs.add(new Certifications(new Etudiant(), "CertifsName", true));
-       // certificationsRepository.save(new Certifications(new Etudiant(), "CertifsName", true));
+       certificationsRepository.save(new Certifications(new Etudiant(), "CertifsName", true));
         return new Certifications();
     }
 

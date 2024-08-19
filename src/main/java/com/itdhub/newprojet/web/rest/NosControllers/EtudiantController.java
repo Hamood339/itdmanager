@@ -4,7 +4,6 @@ import com.itdhub.newprojet.domain.NosClasses.Etudiant;
 import com.itdhub.newprojet.repository.NosRepository.EtudiantRepository;
 import com.itdhub.newprojet.service.NosServices.EtudiantService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

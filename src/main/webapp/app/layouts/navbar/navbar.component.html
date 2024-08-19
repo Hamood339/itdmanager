@@ -5,10 +5,10 @@
       <h1>{{ titre }}</h1>
     </div>
     <ul class="nav-links">
-      <li><a routerLink="">Accueil</a></li>
-      <li><a routerLink="/about">À Propos</a></li>
-      <li><a routerLink="/services">Services</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+      <li><a  [routerLink]="['/']">Accueil</a></li>
+      <li><a [routerLink]="['/about']">À Propos</a></li>
+      <li><a [routerLink]="['/service']">Services</a></li>
+      <li><a [routerLink]="['/contact']">Contact</a></li>
     </ul>
   </nav>
 </header>

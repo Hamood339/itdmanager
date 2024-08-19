@@ -33,13 +33,23 @@ Logo styles
   vertical-align: middle;
   background: url('/content/images/logo-jhipster.png') no-repeat center center;
   background-size: contain;
+}.logo-img {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('/content/images/logo-jhipster.png') no-repeat center center;
+  background-size: contain;
 }
 */
 
 
+
 header {
-  background-color: #c99507;
+  background-color: #044daa;
   color: white;
+  font-style: normal;
+  font-family: "Roboto Light";
   padding: 10px 20px;
 }
 
