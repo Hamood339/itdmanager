@@ -9,6 +9,7 @@ import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
 import { EtudiantsComponent } from './etudiants/etudiants.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 
 const routes: Routes = [
@@ -46,9 +47,15 @@ const routes: Routes = [
 
   },
   {
-    path:'certifSpace',
+    path:'login',
+    component:AcceuilComponent,
+    title:'Acceuil'
+
+  },
+  {
+    path:'certifs',
     component:CertificationsComponent,
-    title:'Espace Certifications'
+    title:'Espace Certification'
 
   },
   {

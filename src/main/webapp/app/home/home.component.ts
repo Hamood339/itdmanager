@@ -8,6 +8,7 @@ import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/auth/account.model';
 import { EtudiantsComponent } from '../etudiants/etudiants.component';
 import { CertificationsComponent } from '../certifications/certifications.component';
+import LoginComponent from '../login/login.component';
 
 
 
@@ -16,7 +17,7 @@ import { CertificationsComponent } from '../certifications/certifications.compon
   selector: 'jhi-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [SharedModule, RouterModule, EtudiantsComponent,CertificationsComponent]
+  imports: [SharedModule, RouterModule, EtudiantsComponent, CertificationsComponent, LoginComponent]
 })
 export default class HomeComponent implements OnInit, OnDestroy {
   account = signal<Account | null>(null);

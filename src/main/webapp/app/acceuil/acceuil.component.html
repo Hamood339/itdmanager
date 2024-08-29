@@ -1,0 +1,10 @@
+<div class="button-container">
+
+  <button class="etudiant" [routerLink]="['/studentSpace']" ><div class="student"> Espace Etudiant</div></button>
+  <button class="prof" [routerLink]="['/profSpace']" ><div class="teacher"> Espace Professeur</div></button>
+  <button class="certifs" [routerLink]="['/certifs']" ><div class="online"> Certifications</div></button>
+  <button class="cours" [routerLink]="['/coursSpace']" ><div class="lesson"> Cours</div> </button>
+  <button class="salle" [routerLink]="['/classeSpace']" > <div class="classroom"> Salle de Classe</div></button>
+  <button class="notifs" [routerLink]="['/notifSpace']" ><div class="sms"> Notifications</div></button>
+</div>
+<router-outlet></router-outlet>

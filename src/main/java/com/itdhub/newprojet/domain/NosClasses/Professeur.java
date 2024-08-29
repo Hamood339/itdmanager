@@ -1,11 +1,10 @@
 package com.itdhub.newprojet.domain.NosClasses;
 
 import jakarta.persistence.*;
-import jakarta.transaction.Transactional;
 
 @Entity
 
-public class Proffesseur {
+public class Professeur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -22,10 +21,10 @@ public class Proffesseur {
 
     private String telephone;
 
-    public Proffesseur() {
+    public Professeur() {
     }
 
-    public Proffesseur(Long id, String nom, String prenom, String adresse, int age, String email, String telephone) {
+    public Professeur(Long id, String nom, String prenom, String adresse, int age, String email, String telephone) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
