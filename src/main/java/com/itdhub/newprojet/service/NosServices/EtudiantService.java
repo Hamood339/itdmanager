@@ -27,15 +27,14 @@ public class EtudiantService {
     );
 
     public List<Etudiant> getEtudiant() {
-
-       // etudiantRepository.findAll();
-        return etudiants;
-
+        etudiants.add(etudiant);
+       return etudiants;
     }
 
     public Etudiant getById(Long id) {
     //etudiantRepository.saveAll(etudiants);
-        return etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
+         etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
+        return etudiant;
     }
 
     public void deleteEtudiantById(Long id) {

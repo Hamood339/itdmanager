@@ -8,14 +8,14 @@ import { AppPageTitleStrategy } from 'app/app-page-title-strategy';
 import FindLanguageFromKeyPipe from 'app/shared/language/find-language-from-key.pipe';
 import FooterComponent from '../footer/footer.component';
 import PageRibbonComponent from '../profiles/page-ribbon.component';
-import { EtudiantsComponent } from '../../etudiants/etudiants.component';
+
 
 @Component({
   standalone: true,
   selector: 'jhi-main',
   templateUrl: './main.component.html',
   providers: [AppPageTitleStrategy],
-  imports: [RouterOutlet, FooterComponent, PageRibbonComponent, EtudiantsComponent]
+  imports: [RouterOutlet, FooterComponent, PageRibbonComponent]
 })
 export default class MainComponent implements OnInit {
   private renderer: Renderer2;

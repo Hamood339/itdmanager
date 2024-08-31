@@ -6,9 +6,11 @@ import { takeUntil } from 'rxjs/operators';
 import SharedModule from 'app/shared/shared.module';
 import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/auth/account.model';
-import { EtudiantsComponent } from '../etudiants/etudiants.component';
-import { CertificationsComponent } from '../certifications/certifications.component';
-import LoginComponent from '../login/login.component';
+
+import LoginComponent from '../../login/login.component';
+
+
+
 
 
 
@@ -17,7 +19,7 @@ import LoginComponent from '../login/login.component';
   selector: 'jhi-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [SharedModule, RouterModule, EtudiantsComponent, CertificationsComponent, LoginComponent]
+  imports: [SharedModule, RouterModule, LoginComponent]
 })
 export default class HomeComponent implements OnInit, OnDestroy {
   account = signal<Account | null>(null);
@@ -26,6 +28,8 @@ export default class HomeComponent implements OnInit, OnDestroy {
 
   private accountService = inject(AccountService);
   private router = inject(Router);
+
+
 
   ngOnInit(): void {
     this.accountService
@@ -42,4 +46,7 @@ export default class HomeComponent implements OnInit, OnDestroy {
     this.destroy$.next();
     this.destroy$.complete();
   }
+
+
+
 }
