@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
+    objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1724083338617-14" author="Ahmadou Diallo (generated)">
+        <createTable tableName="course">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_course"/>
+            </column>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="start_date" type="DATE"/>
+            <column name="end_date" type="DATE"/>
+            <column name="classroom" type="VARCHAR(255)"/>
+            <column name="module_course" type="SMALLINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1724083338617-15" author="Ahmadou Diallo (generated)">
+        <createTable tableName="jhi_date_time_wrapper">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_jhi_date_time_wrapper"/>
+            </column>
+            <column name="instant" type="DATETIME"/>
+            <column name="local_date_time" type="DATETIME"/>
+            <column name="offset_date_time" type="timestamp"/>
+            <column name="zoned_date_time" type="timestamp"/>
+            <column name="local_time" type="TIME"/>
+            <column name="offset_time" type="time"/>
+            <column name="local_date" type="DATE"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1724083338617-16" author="Ahmadou Diallo (generated)">
+        <createTable tableName="proffesseur">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_proffesseur"/>
+            </column>
+            <column name="nom" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prenom" type="VARCHAR(255)"/>
+            <column name="adresse" type="VARCHAR(255)"/>
+            <column name="age" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telephone" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1724083338617-17" author="Ahmadou Diallo (generated)">
+        <createTable tableName="salle_de_classe">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_salledeclasse"/>
+            </column>
+            <column name="nom_de_la_salle" type="VARCHAR(255)"/>
+            <column name="capcite_de_la_salle" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_de_salle" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1724083338617-18" author="Ahmadou Diallo (generated)">
+        <addPrimaryKey columnNames="id" constraintName="pk_certifications" tableName="certifications"/>
+    </changeSet>
+    <changeSet id="1724083338617-19" author="Ahmadou Diallo (generated)">
+        <addPrimaryKey columnNames="nom" constraintName="pk_etudiant" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-20" author="Ahmadou Diallo (generated)">
+        <addUniqueConstraint columnNames="email" constraintName="uc_proffesseur_email" tableName="proffesseur"/>
+    </changeSet>
+    <changeSet id="1724083338617-1" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="adresse" newDataType="VARCHAR(255)" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-2" author="Ahmadou Diallo (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="adresse" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-3" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="email" newDataType="VARCHAR(255)" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-4" author="Ahmadou Diallo (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="email" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-5" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="email" newDataType="VARCHAR(254)" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet id="1724083338617-6" author="Ahmadou Diallo (generated)">
+        <addAutoIncrement columnDataType="bigint" columnName="id" tableName="certifications"/>
+    </changeSet>
+    <changeSet id="1724083338617-7" author="Ahmadou Diallo (generated)">
+        <dropColumn columnName="id" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-8" author="Ahmadou Diallo (generated)">
+        <addColumn tableName="etudiant">
+            <column name="id" type="INT">
+                <constraints nullable="false" validateNullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1724083338617-9" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="name" newDataType="VARCHAR(255)" tableName="certifications"/>
+    </changeSet>
+    <changeSet id="1724083338617-10" author="Ahmadou Diallo (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="name" tableName="certifications"/>
+    </changeSet>
+    <changeSet id="1724083338617-11" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="nom" newDataType="VARCHAR(255)" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-12" author="Ahmadou Diallo (generated)">
+        <modifyDataType columnName="prenom" newDataType="VARCHAR(255)" tableName="etudiant"/>
+    </changeSet>
+    <changeSet id="1724083338617-13" author="Ahmadou Diallo (generated)">
+        <dropNotNullConstraint columnDataType="varchar(255)" columnName="prenom" tableName="etudiant"/>
+    </changeSet>
+
+</databaseChangeLog>

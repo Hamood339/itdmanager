@@ -4,13 +4,9 @@ import { Authority } from 'app/config/authority.constants';
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
 import { errorRoute } from './layouts/error/error.route';
 
-import HomeComponent from './home/home.component';
+import HomeComponent from './home/ITD/home.component';
 import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
-import { EtudiantsComponent } from './etudiants/etudiants.component';
-import { CertificationsComponent } from './certifications/certifications.component';
-import { AcceuilComponent } from './acceuil/acceuil.component';
-
 
 const routes: Routes = [
   {
@@ -40,24 +36,7 @@ const routes: Routes = [
     component: LoginComponent,
     title: 'login.title',
   },
-  {
-    path:'studentSpace',
-    component:EtudiantsComponent,
-    title:'Espace Etudinant'
 
-  },
-  {
-    path:'login',
-    component:AcceuilComponent,
-    title:'Acceuil'
-
-  },
-  {
-    path:'certifs',
-    component:CertificationsComponent,
-    title:'Espace Certification'
-
-  },
   {
     path: '',
     loadChildren: () => import(`./entities/entity.routes`),

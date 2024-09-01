@@ -1,3 +1,66 @@
+body{
+  margin: 10px;
+  padding: 50px;
+  background-color: #c99507;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+img{
+  width: 40%;
+  height: 20%;
+}
+button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin: 0;
+  background-color: #c99507;
+ // flex: 1 1 calc(100% - 10px); /* Chaque bouton occupe environ un tiers de la ligne moins l'espacement */
+  padding: 40px 60px;            /* Taille du bouton (grandes dimensions) */
+  font-size: 40px;               /* Taille du texte à l'intérieur du bouton */
+  color: #0c0a01;                  /* Couleur du texte */
+  border: none;                  /* Retirer les bordures */
+  border-radius: 48px 0;            /* Coins légèrement arrondis */
+  cursor: pointer;               /* Change le curseur lorsqu'on survole le bouton */
+  transition: background-color 0.3s ease; /* Transition douce pour les changements de couleur */
+  width: 50%;
+}
+
+.button-container button:hover {
+  background-color: #044daa;
+
+}
+.login {
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  width:  200px;
+  height: 20vh;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FF5733 50%, #33B5E5 50%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0c0a01; /* Couleur du texte */
+  transition: background-color 0.3s ease;
+}
+
+.acceuil{
+  width: 300px;
+  height: 30vh;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FF5733 50%, #33B5E5 50%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0c0a01; /* Couleur du texte */
+  transition: background-color 0.3s ease;
+}
 /* ==========================================================================
 Main page styles
 ========================================================================== */
@@ -51,7 +114,7 @@ body{
   flex: 1 1 calc(33.33% - 10px); /* Chaque bouton occupe environ un tiers de la ligne moins l'espacement */
   padding: 20px 40px;            /* Taille du bouton (grandes dimensions) */
   font-size: 20px;               /* Taille du texte à l'intérieur du bouton */
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   border: none;                  /* Retirer les bordures */
   border-radius: 48px 0;            /* Coins légèrement arrondis */
   cursor: pointer;               /* Change le curseur lorsqu'on survole le bouton */
@@ -70,7 +133,7 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
 .prof{
@@ -81,7 +144,7 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
 .certifs{
@@ -92,7 +155,7 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
 .cours{
@@ -103,7 +166,7 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
 .notifs{
@@ -114,7 +177,7 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
 .salle{
@@ -125,6 +188,12 @@ body{
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  color: white;                  /* Couleur du texte */
+  color: #0c0a01;                  /* Couleur du texte */
   transition: background-color 0.3s ease;
 }
+.connect{
+  padding: 20px 4px;
+  margin: 10px;
+
+}
+
