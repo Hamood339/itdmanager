@@ -8,6 +8,9 @@ import HomeComponent from './home/ITD/home.component';
 import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
 
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { EtudiantComponent } from './etudiant/etudiant.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -35,6 +38,16 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'login.title',
+  },
+  {
+    path: 'acceuil',
+    component: AcceuilComponent,
+    title: 'Acceuil',
+  },
+  {
+    path: 'student',
+    component: EtudiantComponent,
+    title: 'Espace Etudiant',
   },
 
   {
