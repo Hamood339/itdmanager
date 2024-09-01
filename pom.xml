@@ -126,6 +126,11 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.infobip</groupId>
+            <artifactId>infobip-api-java-client</artifactId>
+            <version>3.1.0</version>  <!-- Vérifiez la dernière version disponible -->
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>

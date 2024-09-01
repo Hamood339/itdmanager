@@ -60,7 +60,7 @@ public class NotificationService {
     }
 
     public void sendSMS(String phoneNumber, String message) {
-        // Code pour envoyer un SMS en utilisant infobip
+
         ApiClient client = new ApiClient();
         client.setApiKeyPrefix("App");
         client.setApiKey(apiKey);
