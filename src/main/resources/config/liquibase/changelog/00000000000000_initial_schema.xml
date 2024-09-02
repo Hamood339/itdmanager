@@ -52,21 +52,6 @@
             <column name="id" type="long" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="title" type="varchar(50)" value="">
-                <constraints nullable="false"/>
-            </column>
-            <column name="description" type="varchar(255)" value="">
-                <constraints nullable="false"/>
-            </column>
-            <column name="startDate" type="LocalDate" value="">
-                <constraints nullable="false"/>
-            </column>
-            <column name="endDate" type="LocalDate" value="">
-                <constraints nullable="false"/>
-            </column>
-            <column name="classroom" type="varchar(70)" value="">
-                <constraints nullable="false"/>
-            </column>
             <column name="ModuleCourse" type="varchar(50)" value="">
                 <constraints nullable="false"/>
             </column>
