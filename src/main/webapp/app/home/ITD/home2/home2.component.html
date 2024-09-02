@@ -1,0 +1,15 @@
+
+
+<div *ngIf="accountService.isAuthenticated()"><h1>Bienvenue {{ account()!.login }}!</h1></div>
+<body>
+
+<div class="button-container">
+  <button class="etudiant" [routerLink]="['/student']" ><div class="online"> Espace Etudiant</div></button>
+  <button class="prof" [routerLink]="['/profs']" ><div class="lesson"> Espace Professeur</div> </button>
+  <button class="admin" [routerLink]="['/admini']">Administration</button>
+</div>
+<router-outlet></router-outlet>
+</body>
+
+
+

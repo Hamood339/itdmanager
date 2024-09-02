@@ -1,0 +1,10 @@
+
+<body>
+<div class="button-container">
+  <button class="etudiant" [routerLink]="['/cours']" ><div class="online"> cours</div></button>
+  <button class="etudiant" [routerLink]="['/certifs']" ><div class="online"> certification</div></button>
+  <button class="prof" [routerLink]="['/emploi']" ><div class="lesson"> Emploi du temps</div> </button>
+  <button class="admin" [routerLink]="['/notes']">Notes</button>
+</div>
+<router-outlet></router-outlet>
+</body>
