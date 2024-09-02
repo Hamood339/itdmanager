@@ -17,19 +17,17 @@ public class SalleDeClasseController {
     @Autowired
     private SalleDeClasseService salleDeClasseService;
 
-    @RequestMapping(method = GET, value = "/salleDeClasse")
-    public List<SalleDeClasse> getsalleDeClasses() {
-        return salleDeClasseService.getSalleDeClasses();
+    @RequestMapping(method = GET, value = "/salleDeClasses")
+    public List<SalleDeClasse> getSalleDeClasses() {
+        return salleDeClasseService.getSallaDeClasses();
     }
     @RequestMapping("/salleDeClasse/{id}")
-    public ResponseEntity<SalleDeClasse> getSalleDeClassesById(@PathVariable Long id) {
-        Optional<SalleDeClasse> salleDeClasses = salleDeClasseService.findById(id);
-        return salleDeClasses.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    public SalleDeClasse getSalleDeClasseById(@PathVariable Long id) {
+        return salleDeClasseService.getSalleDeClasse(id);
     }
-
     @RequestMapping(method = POST, value = "/salleDeClasse")
-    public void createSalleDeClasse(@RequestBody SalleDeClasse salleDeClasse) {
-         salleDeClasseService.save(salleDeClasse);
+    public void addSalleDeClasse(@RequestBody SalleDeClasse salleDeClasse) {
+         salleDeClasseService.addSalleDeClasse(salleDeClasse);
     }
 
     @RequestMapping(method = PUT,value = "salleDeClasse/{id}")

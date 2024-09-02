@@ -7,9 +7,6 @@ import jakarta.persistence.Id;
 
 @Entity
 public class SalleDeClasse {
-    public SalleDeClasse(long l, String salleB, int i) {
-    }
-
     public enum typeDeSalle{
     SALLE_CONFERENCE,
     LABORATOIRE,
