@@ -8,9 +8,8 @@ import java.util.List;
 
 @Repository
 public interface NotesRepository extends JpaRepository<Notes, Long> {
-    List<Notes> findByEtudiantId(Long etudiantId);
+    //List<Notes> findByEtudiantId(Long etudiantId);
+   // Notes findByMatiere(String matiere);
 
-    // Vous pouvez ajouter d'autres méthodes de requête si nécessaire, par exemple :
-    List<Notes> findByEtudiantIdAndMatiere(Long etudiantId, String matiere);
-    List<Notes> findByEtudiantIdOrderByDateEvaluationDesc(Long etudiantId);
+
 }

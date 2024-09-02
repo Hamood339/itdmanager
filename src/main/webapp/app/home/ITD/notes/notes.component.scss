@@ -1,0 +1,54 @@
+
+/* Style général du tableau */
+.notes {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* En-tête du tableau */
+.notes thead {
+    background-color: #f2f2f2;
+}
+
+.notes th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+/* Cellules du tableau */
+.notes td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Effet au survol des lignes */
+.notes tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Couleurs alternées pour les lignes du corps du tableau */
+.notes tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style spécifique pour la colonne des notes */
+.notes td:last-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive design pour les petits écrans */
+@media screen and (max-width: 600px) {
+    .notes {
+        font-size: 14px;
+    }
+    
+    .notes th, .notes td {
+        padding: 8px;
+    }
+}
+  
+  

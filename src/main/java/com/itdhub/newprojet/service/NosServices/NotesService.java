@@ -13,10 +13,14 @@ public class NotesService {
 
     @Autowired
     public NotesService(NotesRepository notesRepository){
+
         this.notesRepository = notesRepository;
     }
 
-    public List<Notes> getNotesForEtudiant(Long etudiantId) {
-        return notesRepository.findByEtudiantId(etudiantId);
+    public List<Notes> getAllNotes() {
+        return notesRepository.findAll();
     }
+
+
+
 }

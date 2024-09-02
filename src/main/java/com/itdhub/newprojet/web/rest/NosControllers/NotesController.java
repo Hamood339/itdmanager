@@ -13,14 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/notes")
+@RequestMapping("/api")
 public class NotesController {
     private final NotesService notesService;
 
     @Autowired
     public NotesController(NotesService notesService) {
+
         this.notesService = notesService;
     }
 
+    @GetMapping("/notes")
+    public ResponseEntity<List<Notes>> getAllNotes() {
+        List<Notes> notes = notesService.getAllNotes();
+            return ResponseEntity.ok(notes);
+        }
 
-}
+    }
+
