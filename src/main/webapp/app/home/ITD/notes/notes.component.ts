@@ -18,6 +18,8 @@ export class NotesComponent implements OnInit, OnDestroy {
 
   protected accountService = inject(AccountService);
   private router = inject(Router);
+  private notesService: any;
+  private notes: any;
 
   ngOnInit(): void {
     this.accountService
@@ -36,5 +38,13 @@ export class NotesComponent implements OnInit, OnDestroy {
   }
 
 
-
+ /* loadNotes(): void {
+    this.notesService
+      .getNotes()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        notes => this.notes.set(notes),
+        error => console.error('Erreur lors du chargement des notes:', error)
+      );
+  }*/
 }
