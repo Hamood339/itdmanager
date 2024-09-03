@@ -11,6 +11,7 @@ import { NotesComponent } from './etudiant/notes/notes.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ProfesseurComponent } from './professeur/professeur.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { EmpoiDuTempsComponent } from '../../empoi-du-temps/empoi-du-temps.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,7 @@ const routes: Routes = [
   {path:'admini',component:AdministrationComponent},
   {path:'certifs',component:CertificationsComponent},
   {path:'profs',component:ProfesseurComponent},
-  {path:'emploi',component:EtudiantComponent},
+  {path:'emploi',component:EmpoiDuTempsComponent},
 ];
 @NgModule({
   declarations:[
