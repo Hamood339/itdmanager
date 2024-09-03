@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-/*interface Notes {
+interface Notes {
 }
 
 @Injectable({
@@ -19,4 +19,4 @@ export class NotesService {
     return this.http.get<Notes[]>(this.url);
   }
 
-}*/
+}
