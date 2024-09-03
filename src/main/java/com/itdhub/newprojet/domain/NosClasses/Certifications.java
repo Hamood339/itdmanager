@@ -1,9 +1,6 @@
 package com.itdhub.newprojet.domain.NosClasses;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.transaction.annotation.Transactional;
 
 @Entity
@@ -13,6 +10,8 @@ public class Certifications {
     boolean encours;
     String name;
     Etudiant etudiant;
+
+
 
     public Certifications(Etudiant etudiant, String name, boolean encours) {
         this.id = id;

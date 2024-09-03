@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau des notes</title>
-    
+
 </head>
 <body>
 
-    <div *ngIf="accountService.isAuthenticated()"><h1>Je suis {{ account()!.login }}!</h1></div>
+
     <div class="IDF">
-        Prénom:Maty
-        Nom: Ndour
-        Matricule: ITD-LAB027
+      <br> Prénom:Maty
+      <br> Nom: Ndour
+      <br> Matricule: ITD-LAB027
     </div>
     <table class="notes">
         <thead>
@@ -23,21 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Base de Données</td>
-                <td>18</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>dev backend</td>
-                <td>15</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Marketing Digital</td>
-                <td>17</td>
-            </tr>
+
         </tbody>
     </table>
 </body>
