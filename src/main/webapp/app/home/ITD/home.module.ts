@@ -5,9 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import LoginComponent from '../../login/login.component';
 
 import { EtudiantComponent } from './etudiant/etudiant.component';
-import { Home2Component } from './home2/home2.component';
+import { Home2Component } from './etudiant/home2/home2.component';
 import { NotificationComponent } from './notification/notification.component';
-import { NotesComponent } from './notes/notes.component';
+import { NotesComponent } from './etudiant/notes/notes.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ProfesseurComponent } from './professeur/professeur.component';
 import { CertificationsComponent } from './certifications/certifications.component';

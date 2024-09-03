@@ -1,9 +1,9 @@
 import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { Account } from '../../../core/auth/account.model';
+import { Account } from '../../../../core/auth/account.model';
 import { Subject } from 'rxjs';
-import { AccountService } from '../../../core/auth/account.service';
+import { AccountService } from '../../../../core/auth/account.service';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({

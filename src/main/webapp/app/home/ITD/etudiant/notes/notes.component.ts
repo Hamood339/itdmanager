@@ -1,6 +1,6 @@
 import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
-import { Account } from '../../../core/auth/account.model';
-import { AccountService } from '../../../core/auth/account.service';
+import { Account } from '../../../../core/auth/account.model';
+import { AccountService } from '../../../../core/auth/account.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 
