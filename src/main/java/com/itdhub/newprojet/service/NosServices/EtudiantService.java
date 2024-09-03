@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Service
 public class EtudiantService {
 
@@ -18,22 +20,23 @@ public class EtudiantService {
     EtudiantRepository etudiantRepository;
     private static ArrayList<Etudiant> etudiants = new ArrayList<>(
         Arrays.asList(
-            new Etudiant(1, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com"),
-            new Etudiant(2, "Diop", "moussa ", "Dakar", "diop21@gmail.com"),
-            new Etudiant(3, "sane", "malick", "Dakar", "sane45@gmail.com"),
-            new Etudiant(4, "sene", "fatou", "Dakar", "fatou78@gmail.com")
+            new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "12/12/2002","ITD-LAB"+id,"Senegalais"),
+            new Etudiant(2L, "Diop", "moussa ", "Dakar", "diop21@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais"),
+            new Etudiant(3L, "sane", "malick", "Dakar", "sane45@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais"),
+            new Etudiant(4L, "sene", "fatou", "Dakar", "fatou78@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais")
         )
 
     );
 
     public List<Etudiant> getEtudiant() {
         etudiants.add(etudiant);
-       return etudiants;
+       return etudiantRepository.saveAll(etudiants);
     }
 
     public Etudiant getById(Long id) {
-    //etudiantRepository.saveAll(etudiants);
-         etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
+
+        etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
+        etudiantRepository.saveAll(etudiants);
         return etudiant;
     }
 

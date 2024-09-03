@@ -4,23 +4,34 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+
 @Entity
 @Transactional
 public  class Etudiant {
-    private int id;
+    private Long id;
     private String nom;
     private String prenom;
     private String adresse;
     private String email;
+    private Date naissance=new Date();
+    private String matricule;
+    private String nationalite;
 
-    public Etudiant(int id, String nom, String prenom, String adresse, String email) {
+    public Etudiant(Long id, String nom, String prenom, String adresse, String email,Date naissance,String matricule,String nationalite) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
+        this.naissance =naissance;
+        this.matricule=matricule;
+        this.nationalite=nationalite;
     }
 
     public Etudiant() {}
+
+    public Etudiant(Long id, String diallo, String ahmad, String dakar, String mail, String s, String matricule, String senegalais) {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,12 +67,35 @@ public  class Etudiant {
         this.email = email;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
+    public Date getNaissance() {
+        return naissance;
+    }
+
+    public void setNaissance(Date naissance) {
+        this.naissance = naissance;
+    }
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+
+    public String getNationalite() {
+        return nationalite;
+    }
+
+    public void setNationalite(String nationalite) {
+        this.nationalite = nationalite;
+    }
 }
