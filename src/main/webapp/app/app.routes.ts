@@ -81,6 +81,11 @@ const routes: Routes = [
     component: EtudiantComponent,
     title: 'Espace Etudiant',
   },
+  {
+    path: 'emploi',
+    component: EtudiantComponent,
+    title: 'emploi du temps',
+  },
 
 
   {
