@@ -30,6 +30,8 @@ public  class Etudiant {
         this.nationalite=nationalite;
     }
 
+
+
     public Etudiant() {}
 
     public Etudiant(long id, String sene, String fatou, String dakar, String mail, String s, String matricule, String senegalais) {
