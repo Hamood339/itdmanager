@@ -22,13 +22,15 @@ const routes: Routes = [
   {path:'notes',component:NotesComponent},
   {path:'admini',component:AdministrationComponent},
   {path:'certifs',component:CertificationsComponent},
-  {path:'profs',component:ProfesseurComponent}
+  {path:'profs',component:ProfesseurComponent},
+  {path:'emploi',component:EtudiantComponent},
 ];
 @NgModule({
   declarations:[
 
   ],
   imports: [
+    EtudiantComponent,
     ProfesseurComponent,
     CertificationsComponent,
     AdministrationComponent,
