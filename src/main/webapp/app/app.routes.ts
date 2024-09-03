@@ -49,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: 'certifs',
-    component: CertificationsComponent,
+    component:  CertificationsComponent,
     title: 'certificatons',
   },
   {
