@@ -76,9 +76,6 @@
             <column name="user_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
-            <column name="etudiant_matricule" type="bigint">
-                <constraints nullable="false" unique="true"/>
-            </column>
             <column name="authority_name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
@@ -124,10 +121,10 @@
                 <constraints nullable="false" unique="true"/>
             </column>
             <column name="nationalite" type="varchar(50)">
-                <constraints nullable="false" unique="false"/>
+                <constraints nullable="false" unique="true"/>
             </column>
             <column name="naissance" type="date">
-                <constraints nullable="false" unique="false"/>
+                <constraints nullable="false" unique="true"/>
             </column>
             <column name="matricule" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>

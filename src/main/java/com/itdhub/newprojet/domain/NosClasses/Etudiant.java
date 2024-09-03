@@ -8,24 +8,24 @@ import java.util.Date;
 
 @Entity
 @Transactional
+@Table(name = "etudiant")
 public  class Etudiant {
     private Long id;
-
     private String nom;
     private String prenom;
     private String adresse;
     private String email;
-    private Date naissance=new Date();
+
     private String matricule;
     private String nationalite;
 
-    public Etudiant(Long id, String nom, String prenom, String adresse, String email,Date naissance,String matricule,String nationalite) {
+    public Etudiant(Long id, String nom, String prenom, String adresse, String email,String matricule,String nationalite) {
         this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
-        this.naissance =naissance;
+
         this.matricule=matricule;
         this.nationalite=nationalite;
     }
@@ -34,8 +34,13 @@ public  class Etudiant {
 
     public Etudiant() {}
 
-    public Etudiant(long id, String sene, String fatou, String dakar, String mail, String s, String matricule, String senegalais) {
-    }
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "etudiant_authority" , nullable = false)
+private Etudiant étudiant;
+
+
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -79,13 +84,6 @@ public  class Etudiant {
         this.id = id;
     }
 
-    public Date getNaissance() {
-        return naissance;
-    }
-
-    public void setNaissance(Date naissance) {
-        this.naissance = naissance;
-    }
 
     public String getMatricule() {
         return matricule;

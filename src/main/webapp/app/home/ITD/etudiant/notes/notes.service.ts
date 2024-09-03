@@ -11,12 +11,13 @@ interface Notes {
 })
 export class NotesService {
   private url='http://localhost:8080/api/notes'
+  private httpClient: any;
 
 
   constructor( private http:HttpClient) {}
 
-  getNotes(): Observable<Notes[]> {
-    return this.http.get<Notes[]>(this.url);
+  notes(): Observable<object> {
+    return this.httpClient.get(this.url);
   }
 
 }

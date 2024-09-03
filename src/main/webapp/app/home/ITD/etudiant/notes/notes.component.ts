@@ -14,12 +14,15 @@ import { Router } from '@angular/router';
 export class NotesComponent implements OnInit, OnDestroy {
    account = signal<Account | null>(null);
 
+
+
   private readonly destroy$ = new Subject<void>();
 
   protected accountService = inject(AccountService);
   private router = inject(Router);
-  private notesService: any;
   private notes: any;
+  private notesService: any;
+  private note: any;
 
   ngOnInit(): void {
     this.accountService
@@ -31,6 +34,11 @@ export class NotesComponent implements OnInit, OnDestroy {
   login(): void {
     this.router.navigate(['/login']);
   }
+  Notes(): void{
+this.notesService.getNotes().subscribe((note: any)=>this.note= note)
+    console.log("Erreur lors du chargement des notes");
+
+  }
 
   ngOnDestroy(): void {
     this.destroy$.next();
@@ -38,13 +46,5 @@ export class NotesComponent implements OnInit, OnDestroy {
   }
 
 
- /* loadNotes(): void {
-    this.notesService
-      .getNotes()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(
-        notes => this.notes.set(notes),
-        error => console.error('Erreur lors du chargement des notes:', error)
-      );
-  }*/
+
 }

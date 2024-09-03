@@ -12,7 +12,7 @@ public class Notes {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "etudiant_id", nullable = false)
+    @JoinColumn(name = "etudiant_matricule", nullable = false)
     private Etudiant etudiant;
 
     @Column(nullable = false)

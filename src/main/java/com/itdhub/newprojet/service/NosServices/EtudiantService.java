@@ -18,26 +18,30 @@ public class EtudiantService {
 
     @Autowired
     EtudiantRepository etudiantRepository;
-    private static ArrayList<Etudiant> etudiants = new ArrayList<>(
-        Arrays.asList(
-            new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "12/12/2002","ITD-LAB00"+id,"Senegalais"),
-            new Etudiant(2L, "Diop", "moussa ", "Dakar", "diop21@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais"),
-            new Etudiant(3L, "sane", "malick", "Dakar", "sane45@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais"),
-            new Etudiant(4L, "sene", "fatou", "Dakar", "fatou78@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais")
-        )
+    private static final ArrayList<Etudiant> etudiants;
 
-    );
+    static {
+        etudiants = new ArrayList<>(
+                Arrays.asList(
+                        new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "ITD-LAB00"+id, "senegalais")
+
+                )
+
+        );
+    }
 
     public List<Etudiant> getEtudiant() {
         etudiants.add(etudiant);
        return etudiantRepository.saveAll(etudiants);
+
     }
 
     public Etudiant getById(Long id) {
 
         etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
         etudiantRepository.saveAll(etudiants);
-        return etudiant;
+       return  etudiant;
+
     }
 
     public void deleteEtudiantById(Long id) {
@@ -46,7 +50,7 @@ public class EtudiantService {
 
     public Etudiant addEtudiant() {
         etudiants.add(etudiant);
-      // etudiantRepository.saveAll(etudiants);
+       etudiantRepository.saveAll(etudiants);
         return etudiant;
     }
 
@@ -55,7 +59,9 @@ public class EtudiantService {
             if (etudiant1.getId() == id) {
                 etudiants.set(etudiants.indexOf(etudiant1), etudiant);
             }
+
         });
+        etudiantRepository.save(etudiant);
         return etudiant;
     }
 }
