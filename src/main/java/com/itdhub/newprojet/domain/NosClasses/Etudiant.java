@@ -34,9 +34,6 @@ public  class Etudiant {
 
     public Etudiant() {}
 
-@ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "etudiant_authority" , nullable = false)
-private Etudiant étudiant;
 
 
 
