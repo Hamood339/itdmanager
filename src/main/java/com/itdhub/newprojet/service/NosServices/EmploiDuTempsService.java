@@ -20,7 +20,7 @@ public class EmploiDuTempsService {
         Calendar finEmploiDuTemps = (Calendar) emploiDuTemps.clone();
         finEmploiDuTemps.set(Calendar.HOUR_OF_DAY,emploiDuTemp.getHeureDebut());
 
-        System.out.println("Emploi du temps pour " + emploiDuTemp.getJour() + " - " + emploiDuTemp.getCours().getTitle() + " : De " + emploiDuTemps.getTime() + " à " + finEmploiDuTemps.getTime());
+        System.out.println("Emploi du temps pour " + emploiDuTemp.getJour() + " - " + emploiDuTemp.getCours().getModuleCourse() + " : De " + emploiDuTemps.getTime() + " à " + finEmploiDuTemps.getTime());
 
 
 
