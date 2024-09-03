@@ -20,10 +20,10 @@ public class EtudiantService {
     EtudiantRepository etudiantRepository;
     private static ArrayList<Etudiant> etudiants = new ArrayList<>(
         Arrays.asList(
-            new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "12/12/2002","ITD-LAB"+id,"Senegalais"),
-            new Etudiant(2L, "Diop", "moussa ", "Dakar", "diop21@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais"),
-            new Etudiant(3L, "sane", "malick", "Dakar", "sane45@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais"),
-            new Etudiant(4L, "sene", "fatou", "Dakar", "fatou78@gmail.com","12/12/2002","ITD-LAB"+id,"Senegalais")
+            new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "12/12/2002","ITD-LAB00"+id,"Senegalais"),
+            new Etudiant(2L, "Diop", "moussa ", "Dakar", "diop21@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais"),
+            new Etudiant(3L, "sane", "malick", "Dakar", "sane45@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais"),
+            new Etudiant(4L, "sene", "fatou", "Dakar", "fatou78@gmail.com","12/12/2002","ITD-LAB00"+id,"Senegalais")
         )
 
     );

@@ -10,6 +10,7 @@ import java.util.Date;
 @Transactional
 public  class Etudiant {
     private Long id;
+
     private String nom;
     private String prenom;
     private String adresse;
@@ -19,6 +20,7 @@ public  class Etudiant {
     private String nationalite;
 
     public Etudiant(Long id, String nom, String prenom, String adresse, String email,Date naissance,String matricule,String nationalite) {
+        this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
@@ -30,7 +32,7 @@ public  class Etudiant {
 
     public Etudiant() {}
 
-    public Etudiant(Long id, String diallo, String ahmad, String dakar, String mail, String s, String matricule, String senegalais) {
+    public Etudiant(long id, String sene, String fatou, String dakar, String mail, String s, String matricule, String senegalais) {
     }
 
     @Id

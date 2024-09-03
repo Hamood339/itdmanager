@@ -120,6 +120,15 @@
             <column name="email" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
+            <column name="nationalite" type="varchar(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="naissance" type="date">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="matricule" type="varchar(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
         </createTable>
         <createTable tableName="emploi_du_temps">
             <column name="id" type="bigint" autoIncrement="true">
