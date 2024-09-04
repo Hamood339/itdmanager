@@ -1,15 +1,22 @@
 package com.itdhub.newprojet.domain.NosClasses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.itdhub.newprojet.domain.Authority;
 import jakarta.persistence.*;
+import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Transactional
 @Table(name = "etudiant")
 public  class Etudiant {
+
+
     private Long id;
     private String nom;
     private String prenom;
@@ -31,13 +38,6 @@ public  class Etudiant {
     }
 
     public Etudiant() {}
-
-@ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "etudiant_authority" , nullable = false)
-private Etudiant etudiant;
-
-
-
 
 
     @Id
@@ -98,4 +98,6 @@ private Etudiant etudiant;
     public void setNationalite(String nationalite) {
         this.nationalite = nationalite;
     }
+
+
 }
