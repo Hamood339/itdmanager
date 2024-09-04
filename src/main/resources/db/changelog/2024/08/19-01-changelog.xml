@@ -32,7 +32,7 @@
         </createTable>
     </changeSet>
     <changeSet id="1724083338617-16" author="Ahmadou Diallo (generated)">
-        <createTable tableName="proffesseur">
+        <createTable tableName="professeur">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="pk_proffesseur"/>
             </column>
@@ -95,7 +95,7 @@
     <changeSet id="1724083338617-8" author="Ahmadou Diallo (generated)">
         <addColumn tableName="etudiant">
             <column name="id" type="INT">
-                <constraints nullable="false" validateNullable="true"/>
+                <constraints nullable="false" validateNullable="false"/>
             </column>
         </addColumn>
     </changeSet>
