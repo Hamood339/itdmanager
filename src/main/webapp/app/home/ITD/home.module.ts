@@ -10,8 +10,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { NotesComponent } from './etudiant/notes/notes.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ProfesseurComponent } from './professeur/professeur.component';
-import { CertificationsComponent } from './certifications/certifications.component';
-import { EmpoiDuTempsComponent } from '../../empoi-du-temps/empoi-du-temps.component';
+import { CertificationsComponent } from './etudiant/certifications/certifications.component';
+import { EmpoiDuTempsComponent } from './etudiant/empoi-du-temps/empoi-du-temps.component';
 
 
 const routes: Routes = [

@@ -12,9 +12,9 @@ import { Home2Component } from './home/ITD/etudiant/home2/home2.component';
 import { AdministrationComponent } from './home/ITD/administration/administration.component';
 import { NotificationComponent } from './home/ITD/notification/notification.component';
 import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
-import { CertificationsComponent } from './home/ITD/certifications/certifications.component';
+import { CertificationsComponent } from './home/ITD/etudiant/certifications/certifications.component';
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
-import { EmpoiDuTempsComponent } from './empoi-du-temps/empoi-du-temps.component';
+import { EmpoiDuTempsComponent } from './home/ITD/etudiant/empoi-du-temps/empoi-du-temps.component';
 
 
 const routes: Routes = [

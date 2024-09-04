@@ -8,8 +8,8 @@ import java.util.Date;
 
 @Entity
 @Transactional
-@Table(name = "etudiant")
 public  class Etudiant {
+
     private Long id;
     private String nom;
     private String prenom;
@@ -30,14 +30,7 @@ public  class Etudiant {
         this.nationalite=nationalite;
     }
 
-
-
     public Etudiant() {}
-
-
-
-
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
