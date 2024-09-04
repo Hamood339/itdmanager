@@ -20,9 +20,9 @@ export class NotesComponent implements OnInit, OnDestroy {
 
   protected accountService = inject(AccountService);
   private router = inject(Router);
-  private notes: any;
+   notes: any;
   private notesService: any;
-  private note: any;
+  note: any;
 
   ngOnInit(): void {
     this.accountService

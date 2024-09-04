@@ -1,14 +1,21 @@
 package com.itdhub.newprojet.domain.NosClasses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.itdhub.newprojet.domain.Authority;
 import jakarta.persistence.*;
+import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Transactional
+@Table(name = "etudiant")
 public  class Etudiant {
+
 
     private Long id;
     private String nom;
@@ -31,6 +38,7 @@ public  class Etudiant {
     }
 
     public Etudiant() {}
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -90,4 +98,6 @@ public  class Etudiant {
     public void setNationalite(String nationalite) {
         this.nationalite = nationalite;
     }
+
+
 }
