@@ -1,7 +1,8 @@
 package com.itdhub.newprojet.config;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
+@Component
 /**
  * Properties specific to Newprojet.
  * <p>
@@ -10,7 +11,20 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @ConfigurationProperties(prefix = "application", ignoreUnknownFields = false)
 public class ApplicationProperties {
+     /* Définit le répertoire de téléchargement des cours
+     * Créer une classe pour charger les propriétés
+Créez une classe Java pour charger les propriétés définies dans application.yml.
 
+Créez ApplicationProperties.java dans src/main/java/com/yourcompany/config :*/
+    private String uploadDir;
+
+    public String getUploadDir() {
+        return uploadDir;
+    }
+
+    public void setUploadDir(String uploadDir) {
+        this.uploadDir = uploadDir;
+    }
     private final Liquibase liquibase = new Liquibase();
 
     // jhipster-needle-application-properties-property
