@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des notes</title>
+
+</head>
+<body>
+<div class="pres">
+  <h2>Mes Notes</h2>
+</div>
+
+<div *ngIf="account() !== null">
+  <p>Bienvenue, {{ account()?.firstName }} {{ account()?.lastName }}</p>
+
+  <div class="no-notes">
+
+    <p>Vous n'avez pas encore de notes enregistrées.</p>
+
+  </div>
+</div>
+
+    <div class="IDF">
+      <br> Prénom:Maty
+      <br> Nom: Ndour
+      <br> Matricule: ITD-LAB027
+    </div>
+
+    <table class="notes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Matière</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{ note.id }}</td>
+          <td>{{ note.matiere }}</td>
+          <td>{{ note.notes }}/20</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

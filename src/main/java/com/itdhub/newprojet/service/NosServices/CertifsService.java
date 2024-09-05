@@ -28,7 +28,7 @@ public class CertifsService {
     );
 
     public List<Certifications> getCertifs() {
-      // certificationsRepository.saveAll(certifs);
+       certificationsRepository.saveAll(certifs);
         return certifs;
     }
 
@@ -44,7 +44,7 @@ public class CertifsService {
                 certifs.set(certifs.indexOf(certifications1), certifications);
             }
         });
-       // certificationsRepository.save(certifications);
+       certificationsRepository.save(certifications);
         return certifications;
     }
 

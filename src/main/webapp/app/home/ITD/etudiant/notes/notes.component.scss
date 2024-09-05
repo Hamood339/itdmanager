@@ -1,0 +1,74 @@
+.pres {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.no-notes {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.notes th, .notes td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.notes th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+.notes {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+
+.notes thead {
+    background-color: #f2f2f2;
+}
+
+.notes th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+
+.notes td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.notes tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.notes tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+.notes td:last-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .notes {
+        font-size: 14px;
+    }
+
+    .notes th, .notes td {
+        padding: 8px;
+    }
+}
+.IDF{
+  font-weight: 900;
+}
+

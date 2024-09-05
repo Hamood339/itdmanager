@@ -8,12 +8,13 @@ import HomeComponent from './home/ITD/home.component';
 import NavbarComponent from './layouts/navbar/navbar.component';
 import LoginComponent from './login/login.component';
 import { EtudiantComponent } from './home/ITD/etudiant/etudiant.component';
-import { Home2Component } from './home/ITD/home2/home2.component';
+import { Home2Component } from './home/ITD/etudiant/home2/home2.component';
 import { AdministrationComponent } from './home/ITD/administration/administration.component';
 import { NotificationComponent } from './home/ITD/notification/notification.component';
-import { NotesComponent } from './home/ITD/notes/notes.component';
+import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
 import { CertificationsComponent } from './home/ITD/certifications/certifications.component';
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
+import { EmpoiDuTempsComponent } from './empoi-du-temps/empoi-du-temps.component';
 
 
 const routes: Routes = [
@@ -49,7 +50,7 @@ const routes: Routes = [
   },
   {
     path: 'certifs',
-    component: CertificationsComponent,
+    component:  CertificationsComponent,
     title: 'certificatons',
   },
   {
@@ -80,6 +81,11 @@ const routes: Routes = [
     path: 'student',
     component: EtudiantComponent,
     title: 'Espace Etudiant',
+  },
+  {
+    path: 'emploi',
+    component: EmpoiDuTempsComponent,
+    title: 'emploi du temps',
   },
 
 

@@ -2,7 +2,7 @@ package com.itdhub.newprojet.domain.NosClasses;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
+
 
 @Entity
 @Table(name = "notes")
@@ -12,22 +12,20 @@ public class Notes {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "etudiant_id", nullable = false)
+    @JoinColumn(name = "etudiant_matricule", nullable = false)
     private Etudiant etudiant;
 
     @Column(nullable = false)
     private String matiere;
 
     @Column(nullable = false)
-    private Double valeur;
+    private Double notes;
 
-    @Column(nullable = false)
-    private LocalDate dateEvaluation;
 
-    // Constructeur par défaut
+
     public Notes() {}
 
-    // Getters
+
     public Long getId() {
         return id;
     }
@@ -40,13 +38,10 @@ public class Notes {
         return matiere;
     }
 
-    public Double getValeur() {
-        return valeur;
+    public Double getNotes() {
+        return notes;
     }
 
-    public LocalDate getDateEvaluation() {
-        return dateEvaluation;
-    }
 
-    // Pas de setters pour garantir l'immutabilité des objets Note une fois créés
+
 }

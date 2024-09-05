@@ -1,26 +1,44 @@
 package com.itdhub.newprojet.domain.NosClasses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.itdhub.newprojet.domain.Authority;
 import jakarta.persistence.*;
+import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Transactional
+@Table(name = "etudiant")
 public  class Etudiant {
-    private int id;
+
+
+    private Long id;
     private String nom;
     private String prenom;
     private String adresse;
     private String email;
 
-    public Etudiant(int id, String nom, String prenom, String adresse, String email) {
+    private String matricule;
+    private String nationalite;
+
+    public Etudiant(Long id, String nom, String prenom, String adresse, String email,String matricule,String nationalite) {
+        this.id=id;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
+
+        this.matricule=matricule;
+        this.nationalite=nationalite;
     }
 
     public Etudiant() {}
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,12 +74,30 @@ public  class Etudiant {
         this.email = email;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
+
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+
+    public String getNationalite() {
+        return nationalite;
+    }
+
+    public void setNationalite(String nationalite) {
+        this.nationalite = nationalite;
+    }
+
 
 }

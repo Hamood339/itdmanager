@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Service
 public class EtudiantService {
 
@@ -16,25 +18,30 @@ public class EtudiantService {
 
     @Autowired
     EtudiantRepository etudiantRepository;
-    private static ArrayList<Etudiant> etudiants = new ArrayList<>(
-        Arrays.asList(
-            new Etudiant(1, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com"),
-            new Etudiant(2, "Diop", "moussa ", "Dakar", "diop21@gmail.com"),
-            new Etudiant(3, "sane", "malick", "Dakar", "sane45@gmail.com"),
-            new Etudiant(4, "sene", "fatou", "Dakar", "fatou78@gmail.com")
-        )
+    private static final ArrayList<Etudiant> etudiants;
 
-    );
+    static {
+        etudiants = new ArrayList<>(
+                Arrays.asList(
+                        new Etudiant(1L, "Diallo", "Ahmad", "Dakar", "ahmadudu339@gmail.com", "ITD-LAB00"+id, "senegalais")
+
+                )
+
+        );
+    }
 
     public List<Etudiant> getEtudiant() {
         etudiants.add(etudiant);
-       return etudiants;
+       return etudiantRepository.saveAll(etudiants);
+
     }
 
     public Etudiant getById(Long id) {
-    //etudiantRepository.saveAll(etudiants);
-         etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
-        return etudiant;
+
+        etudiants.stream().filter(etudiants -> etudiants.getId() == id).findFirst().orElse(null);
+        etudiantRepository.saveAll(etudiants);
+       return  etudiant;
+
     }
 
     public void deleteEtudiantById(Long id) {
@@ -43,7 +50,7 @@ public class EtudiantService {
 
     public Etudiant addEtudiant() {
         etudiants.add(etudiant);
-      // etudiantRepository.saveAll(etudiants);
+       etudiantRepository.saveAll(etudiants);
         return etudiant;
     }
 
@@ -52,7 +59,9 @@ public class EtudiantService {
             if (etudiant1.getId() == id) {
                 etudiants.set(etudiants.indexOf(etudiant1), etudiant);
             }
+
         });
+        etudiantRepository.save(etudiant);
         return etudiant;
     }
 }
