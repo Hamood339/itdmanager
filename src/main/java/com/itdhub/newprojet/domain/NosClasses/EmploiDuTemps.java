@@ -10,14 +10,14 @@ public class EmploiDuTemps {
     private Long id;
     private String jour;
     @Transient
-    private Course cours;
+    private Cours cours;
     private int heureDebut;
     private int heureFin;
 
     public EmploiDuTemps() {
     }
 
-    public EmploiDuTemps(String jour, Course cours, int heureDebut, int heureFin) {
+    public EmploiDuTemps(String jour, Cours cours, int heureDebut, int heureFin) {
         this.jour = jour;
         this.cours = cours;
         this.heureDebut = heureDebut;
@@ -33,11 +33,11 @@ public class EmploiDuTemps {
     }
 
 
-    public Course getCours() {
+    public Cours getCours() {
         return cours;
     }
 
-    public void setCours(Course cours) {
+    public void setCours(Cours cours) {
         this.cours = cours;
     }
 
