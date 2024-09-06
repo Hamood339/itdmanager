@@ -14,7 +14,7 @@ import { NotificationComponent } from './home/ITD/notification/notification.comp
 import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
 import { CertificationsComponent } from './home/ITD/certifications/certifications.component';
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
-import { EmpoiDuTempsComponent } from './empoi-du-temps/empoi-du-temps.component';
+import { EmploiDuTempsComponent } from './emploi-du-temps/emploi-du-temps.component';
 
 
 const routes: Routes = [
@@ -84,7 +84,7 @@ const routes: Routes = [
   },
   {
     path: 'emploi',
-    component: EmpoiDuTempsComponent,
+    component: EmploiDuTempsComponent,
     title: 'emploi du temps',
   },
 

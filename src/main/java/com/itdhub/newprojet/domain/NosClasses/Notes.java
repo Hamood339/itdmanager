@@ -3,7 +3,6 @@ package com.itdhub.newprojet.domain.NosClasses;
 import jakarta.persistence.*;
 
 
-
 @Entity
 @Table(name = "notes")
 public class Notes {
@@ -11,37 +10,68 @@ public class Notes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "etudiant_matricule", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "etudiant_id", nullable = false)
     private Etudiant etudiant;
 
     @Column(nullable = false)
     private String matiere;
 
     @Column(nullable = false)
-    private Double notes;
+    private Double note;
+
+    @Column(name = "annee_academique")
+    private String anneeAcademique;
 
 
 
     public Notes() {}
+
+    public Notes(Etudiant etudiant, String matiere, Double note, String anneeAcademique) {
+        this.etudiant = etudiant;
+        this.matiere = matiere;
+        this.note = note;
+        this.anneeAcademique = anneeAcademique;
+    }
 
 
     public Long getId() {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Etudiant getEtudiant() {
         return etudiant;
+    }
+
+    public void setEtudiant(Etudiant etudiant) {
+        this.etudiant = etudiant;
     }
 
     public String getMatiere() {
         return matiere;
     }
 
-    public Double getNotes() {
-        return notes;
+    public void setMatiere(String matiere) {
+        this.matiere = matiere;
     }
 
+    public Double getNote() {
+        return note;
+    }
 
+    public void setNote(Double note) {
+        this.note = note;
+    }
 
+    public String getAnneeAcademique() {
+        return anneeAcademique;
+    }
+
+    public void setAnneeAcademique(String anneeAcademique) {
+        this.anneeAcademique = anneeAcademique;
+    }
 }

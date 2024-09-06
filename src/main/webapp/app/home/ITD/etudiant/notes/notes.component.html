@@ -1,50 +1,58 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau des notes</title>
+<div class="notes">
+  <h2>Gestion des Notes</h2>
 
-</head>
-<body>
-<div class="pres">
-  <h2>Mes Notes</h2>
-</div>
-
-<div *ngIf="account() !== null">
-  <p>Bienvenue, {{ account()?.firstName }} {{ account()?.lastName }}</p>
-
-  <div class="no-notes">
-
-    <p>Vous n'avez pas encore de notes enregistrées.</p>
-
-  </div>
-</div>
-
-    <div class="IDF">
-      <br> Prénom:Maty
-      <br> Nom: Ndour
-      <br> Matricule: ITD-LAB027
+  <div class="lis">
+    <div>
+      <label for="etudiantId">Matricule:</label>
+      <input id="etudiantId" type="number" [(ngModel)]="etudiantId">
+      <button (click)="getNotesByEtudiantId()">Charger les notes</button>
     </div>
 
-    <table class="notes">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Matière</th>
-                <th>Note</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>{{ note.id }}</td>
-          <td>{{ note.matiere }}</td>
-          <td>{{ note.notes }}/20</td>
-        </tr>
-        </tbody>
-    </table>
+  </div>
 
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Étudiant ID</th>
+      <th>Matière</th>
+      <th>Note</th>
+      <th>Année Académique</th>
 
-</body>
-
-</html>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let note of notes">
+      <td>{{ note.id }}</td>
+      <td>{{ note.etudiant.id }}</td>
+      <td>{{ note.matiere }}</td>
+      <td>{{ note.note }}</td>
+      <td>{{ note.anneeAcademique }}</td>
+      <td>
+        <!--<button (click)="deleteNote(note.id)">Supprimer</button>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+ <!-- <div class="new-note-form">
+    <h3>Ajouter une nouvelle note</h3>
+    <div>
+      <label for="newEtudiantId">ID de l'étudiant:</label>
+      <input id="newEtudiantId" type="number" [(ngModel)]="newNote.etudiantId">
+    </div>
+    <div>
+      <label for="newMatiere">Matière:</label>
+      <input id="newMatiere" type="text" [(ngModel)]="newNote.matiere">
+    </div>
+    <div>
+      <label for="newNote">Note:</label>
+      <input id="newNote" type="number" [(ngModel)]="newNote.note">
+    </div>
+    <div>
+      <label for="newAnneeAcademique">Année Académique:</label>
+      <input id="newAnneeAcademique" type="text" [(ngModel)]="newNote.anneeAcademique">
+    </div>
+    <button (click)="createNote()">Ajouter la note</button>
+  </div>
+</div>-->
+</div>

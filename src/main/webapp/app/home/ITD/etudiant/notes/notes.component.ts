@@ -3,11 +3,14 @@ import { Account } from '../../../../core/auth/account.model';
 import { AccountService } from '../../../../core/auth/account.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'jhi-notes',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './notes.component.html',
   styleUrl: './notes.component.scss'
 })
@@ -23,6 +26,8 @@ export class NotesComponent implements OnInit, OnDestroy {
    notes: any;
   private notesService: any;
   note: any;
+  matiere : any;
+  etudiantId : any;
 
   ngOnInit(): void {
     this.accountService
@@ -38,6 +43,26 @@ export class NotesComponent implements OnInit, OnDestroy {
 this.notesService.getNotes().subscribe((note: any)=>this.note= note)
     console.log("Erreur lors du chargement des notes");
 
+  }
+
+  getNotesByEtudiantId(): void {
+    if (this.etudiantId) {
+      this.notesService.getNotesByEtudiantId(this.etudiantId).subscribe((note: any) => this.notes = note)
+
+      console.log("Erreur lors du chargement des notes de l'étudiant");
+    }
+
+
+    }
+
+
+  getNoteByMatiere(): void {
+    this.matiere
+    {
+      this.notesService.getNoteByMatiere(this.matiere).subscribe((note: any) => this.notes = note)
+
+      console.log("Erreur lors du chargement de la note pour la matière");
+    }
   }
 
   ngOnDestroy(): void {

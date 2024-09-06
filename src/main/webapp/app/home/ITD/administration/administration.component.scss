@@ -1,0 +1,95 @@
+body{
+  margin: 10px;
+  padding: 50px;
+  background-color: #c99507;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin: 0;
+  background-color: #c99507;
+
+  padding: 40px 60px;
+  font-size: 40px;
+  color: #0c0a01;
+  border: none;
+  border-radius: 48px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+.button-container button:hover {
+  background-color: #044daa;
+
+}
+.login {
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  width:  200px;
+  height: 20vh;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FF5733 50%, #33B5E5 50%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0c0a01; /* Couleur du texte */
+  transition: background-color 0.3s ease;
+}
+
+.acceuil{
+  width: 300px;
+  height: 30vh;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(90deg, #FF5733 50%, #33B5E5 50%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #0c0a01; /* Couleur du texte */
+  transition: background-color 0.3s ease;
+}
+body{
+  margin: 0;
+  padding: 20px;
+  background-color: #c99507;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
+.button-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin: 0;
+  background-color: #1d5291;
+  flex: 1 1 calc(33.33% - 10px);
+  padding: 20px 40px;
+  font-size: 20px;
+  color: #0c0a01;
+  border: none;
+  border-radius: 48px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #ffffff;
+
+}
