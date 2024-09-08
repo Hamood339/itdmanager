@@ -18,9 +18,24 @@ public class NotesService {
     }
 
     public List<Notes> getAllNotes() {
+
         return notesRepository.findAll();
     }
 
+    public List<Notes> getNotesByEtudiantId(Long etudiantId) {
+        return notesRepository.findByEtudiantId(etudiantId);
+    }
 
+    public Notes getNoteByMatiere(String matiere) {
+        return notesRepository.findByMatiere(matiere);
+    }
+
+    public Notes saveNote(Notes note) {
+        return notesRepository.save(note);
+    }
+
+    public void deleteNote(Long id) {
+        notesRepository.deleteById(id);
+    }
 
 }

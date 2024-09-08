@@ -11,6 +11,8 @@ interface Notes {
 })
 export class NotesService {
   private url='http://localhost:8080/api/notes'
+  private urlEtude = "http://localhost:8080/api/etudiant/"
+  private urlMatière = "http://localhost:8080/api/matiere/"
   private httpClient: any;
 
 
@@ -18,6 +20,13 @@ export class NotesService {
 
   notes(): Observable<object> {
     return this.httpClient.get(this.url);
+  }
+
+  getNotesByEtudiantId(): Observable<object> {
+    return this.httpClient.get(this.urlEtude);
+  }
+  getNoteByMatiere(): Observable<object> {
+    return this.httpClient.get(this.urlMatière);
   }
 
 }

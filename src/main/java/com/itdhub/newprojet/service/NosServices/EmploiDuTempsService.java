@@ -1,12 +1,9 @@
 package com.itdhub.newprojet.service.NosServices;
 
-import com.itdhub.newprojet.domain.NosClasses.Course;
 import com.itdhub.newprojet.domain.NosClasses.EmploiDuTemps;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Calendar;
-import java.util.Locale;
 
 import static org.apache.commons.lang3.RandomUtils.nextInt;
 
@@ -20,7 +17,7 @@ public class EmploiDuTempsService {
         Calendar finEmploiDuTemps = (Calendar) emploiDuTemps.clone();
         finEmploiDuTemps.set(Calendar.HOUR_OF_DAY,emploiDuTemp.getHeureDebut());
 
-        System.out.println("Emploi du temps pour " + emploiDuTemp.getJour() + " - " + emploiDuTemp.getCours().getModuleCourse() + " : De " + emploiDuTemps.getTime() + " à " + finEmploiDuTemps.getTime());
+        System.out.println("Emploi du temps pour " + emploiDuTemp.getJour() + " - " + emploiDuTemp.getCours().getNom() + " : De " + emploiDuTemps.getTime() + " à " + finEmploiDuTemps.getTime());
 
 
 

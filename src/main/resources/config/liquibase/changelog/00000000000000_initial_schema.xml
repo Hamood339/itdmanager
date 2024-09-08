@@ -57,7 +57,6 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
-
         <createTable tableName="SalleDeClasse">
             <column name="id" type="long" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
