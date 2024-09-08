@@ -4,12 +4,14 @@ import { AccountService } from '../../../../core/auth/account.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 import {FormsModule} from "@angular/forms";
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'jhi-notes',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    NgForOf
   ],
   templateUrl: './notes.component.html',
   styleUrl: './notes.component.scss'

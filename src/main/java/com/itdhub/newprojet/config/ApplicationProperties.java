@@ -1,4 +1,5 @@
 package com.itdhub.newprojet.config;
+import com.itdhub.newprojet.domain.NosClasses.Cours;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -17,6 +18,15 @@ Créez une classe Java pour charger les propriétés définies dans application.
 
 Créez ApplicationProperties.java dans src/main/java/com/yourcompany/config :*/
     private String uploadDir;
+    private Cours cours;
+
+    public Cours getCours() {
+        return cours;
+    }
+
+    public void setCours(Cours cours) {
+        this.cours = cours;
+    }
 
     public String getUploadDir() {
         return uploadDir;

@@ -215,5 +215,5 @@ jhipster:
 
 application:
   cours:
-    upload-dir: uploads/  # Définit le répertoire de téléchargement des cours
+    upload-dir: "uploads/"  # Définit le répertoire de téléchargement des cours
 
