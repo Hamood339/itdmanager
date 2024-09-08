@@ -7,16 +7,19 @@ import com.itdhub.newprojet.service.MailService;
 import com.itdhub.newprojet.service.UserService;
 import com.itdhub.newprojet.service.dto.AdminUserDTO;
 import com.itdhub.newprojet.service.dto.PasswordChangeDTO;
-import com.itdhub.newprojet.web.rest.errors.*;
+import com.itdhub.newprojet.web.rest.errors.EmailAlreadyUsedException;
+import com.itdhub.newprojet.web.rest.errors.InvalidPasswordException;
+import com.itdhub.newprojet.web.rest.errors.LoginAlreadyUsedException;
 import com.itdhub.newprojet.web.rest.vm.KeyAndPasswordVM;
 import com.itdhub.newprojet.web.rest.vm.ManagedUserVM;
 import jakarta.validation.Valid;
-import java.util.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 /**
  * REST controller for managing the current user's account.
@@ -111,13 +114,7 @@ public class AccountResource {
         if (!user.isPresent()) {
             throw new AccountResourceException("User could not be found");
         }
-        userService.updateUser(
-            userDTO.getFirstName(),
-            userDTO.getLastName(),
-            userDTO.getEmail(),
-            userDTO.getLangKey(),
-            userDTO.getImageUrl()
-        );
+        userService.updateUser(userDTO.getFirstName(), userDTO.getLastName(), userDTO.getEmail(), userDTO.getLangKey(), userDTO.getImageUrl());
     }
 
     /**

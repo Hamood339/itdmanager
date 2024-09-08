@@ -4,10 +4,6 @@ import com.itdhub.newprojet.domain.Authority;
 import com.itdhub.newprojet.repository.AuthorityRepository;
 import com.itdhub.newprojet.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import tech.jhipster.web.util.HeaderUtil;
 import tech.jhipster.web.util.ResponseUtil;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * REST controller for managing {@link com.itdhub.newprojet.domain.Authority}.
@@ -65,7 +66,7 @@ public class AuthorityResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of authorities in body.
      */
     @GetMapping("")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize(value = "hasAnyAuthority('ROLE_ADMIN')")
     public List<Authority> getAllAuthorities() {
         log.debug("REST request to get all Authorities");
         return authorityRepository.findAll();
@@ -78,7 +79,7 @@ public class AuthorityResource {
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the authority, or with status {@code 404 (Not Found)}.
      */
     @GetMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize(value = "hasAnyAuthority('ROLE_ADMIN')")
     public ResponseEntity<Authority> getAuthority(@PathVariable("id") String id) {
         log.debug("REST request to get Authority : {}", id);
         Optional<Authority> authority = authorityRepository.findById(id);
@@ -92,7 +93,7 @@ public class AuthorityResource {
      * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
      */
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize(value = "hasAnyAuthority('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteAuthority(@PathVariable("id") String id) {
         log.debug("REST request to delete Authority : {}", id);
         authorityRepository.deleteById(id);

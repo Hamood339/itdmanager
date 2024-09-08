@@ -1,6 +1,8 @@
 package com.itdhub.newprojet.service.dto;
 
 import com.itdhub.newprojet.domain.User;
+
+import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  */
 public class UserDTO implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private Long id;
