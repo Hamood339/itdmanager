@@ -183,6 +183,13 @@
             <column name="activated" type="boolean"/>
             <column name="created_date" type="timestamp"/>
         </loadData>
+
+        <loadData
+            file="config/liquibase/data/etudiant.csv"
+            separator=";"
+            tableName="etudiant"
+            usePreparedStatements="true">
+        </loadData>
         <loadData
             file="config/liquibase/data/etudiant.csv"
             separator=";"
