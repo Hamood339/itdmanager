@@ -214,6 +214,6 @@ jhipster:
 # Configuration spécifique à l'application
 
 application:
-  cours:
-    upload-dir: uploads/  # Définit le répertoire de téléchargement des cours
+
+  upload-dir: uploads/  # Définit le répertoire de téléchargement des cours
 

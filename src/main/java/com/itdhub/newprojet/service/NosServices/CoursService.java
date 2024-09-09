@@ -4,6 +4,7 @@ import com.itdhub.newprojet.repository.NosRepository.CoursRepository;
 import com.itdhub.newprojet.web.rest.errors.BadRequestAlertException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,7 +20,7 @@ import java.util.Optional;
 public class CoursService {
 
     private final Logger log = LoggerFactory.getLogger(CoursService.class);
-
+@Autowired
     private final CoursRepository coursRepository;
 
     @Value("${application.upload-dir}")

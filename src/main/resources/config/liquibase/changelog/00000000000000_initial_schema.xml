@@ -126,9 +126,7 @@
             <column name="nationalite" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="naissance" type="date">
-                <constraints nullable="false" unique="true"/>
-            </column>
+
             <column name="matricule" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
@@ -157,6 +155,12 @@
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"/>
 
+        <addForeignKeyConstraint baseColumnNames="etudiant_matricule"
+                                 baseTableName="jhi_user_authority"
+                                 constraintName="fk_etudiant_matricule"
+                                 referencedColumnNames="matricule"
+                                 referencedTableName="etudiant"/>
+
         <addNotNullConstraint   columnName="password_hash"
                                 columnDataType="varchar(60)"
                                 tableName="jhi_user"/>
@@ -174,6 +178,13 @@
                   usePreparedStatements="true">
             <column name="activated" type="boolean"/>
             <column name="created_date" type="timestamp"/>
+        </loadData>
+        <loadData
+            file="config/liquibase/data/etudiant.csv"
+            separator=";"
+            tableName="etudiant"
+            usePreparedStatements="true">
+
         </loadData>
         <loadData
                   file="config/liquibase/data/user_authority.csv"

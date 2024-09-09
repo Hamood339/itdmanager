@@ -10,8 +10,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { NotesComponent } from './etudiant/notes/notes.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ProfesseurComponent } from './professeur/professeur.component';
-import { CertificationsComponent } from './certifications/certifications.component';
-import { EmpoiDuTempsComponent } from '../../empoi-du-temps/empoi-du-temps.component';
+
+import { EmploiDuTempsComponent } from '../../emploi-du-temps/emploi-du-temps.component';
 
 
 const routes: Routes = [
@@ -22,9 +22,9 @@ const routes: Routes = [
   {path:'notifs',component:NotificationComponent},
   {path:'notes',component:NotesComponent},
   {path:'admini',component:AdministrationComponent},
-  {path:'certifs',component:CertificationsComponent},
+
   {path:'profs',component:ProfesseurComponent},
-  {path:'emploi',component:EmpoiDuTempsComponent},
+  {path:'emploi',component:EmploiDuTempsComponent},
 ];
 @NgModule({
   declarations:[
@@ -33,7 +33,7 @@ const routes: Routes = [
   imports: [
     EtudiantComponent,
     ProfesseurComponent,
-    CertificationsComponent,
+
     AdministrationComponent,
     NotificationComponent,
     NotesComponent,

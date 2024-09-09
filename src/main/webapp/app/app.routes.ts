@@ -12,7 +12,7 @@ import { Home2Component } from './home/ITD/etudiant/home2/home2.component';
 import { AdministrationComponent } from './home/ITD/administration/administration.component';
 import { NotificationComponent } from './home/ITD/notification/notification.component';
 import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
-import { CertificationsComponent } from './home/ITD/certifications/certifications.component';
+
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
 import { EmploiDuTempsComponent } from './emploi-du-temps/emploi-du-temps.component';
 
@@ -48,11 +48,7 @@ const routes: Routes = [
     component: NotesComponent,
     title: 'Notes',
   },
-  {
-    path: 'certifs',
-    component:  CertificationsComponent,
-    title: 'certificatons',
-  },
+
   {
     path: 'profs',
     component: ProfesseurComponent,
