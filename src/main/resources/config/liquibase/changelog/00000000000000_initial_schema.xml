@@ -11,6 +11,7 @@
         The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
     -->
     <changeSet id="00000000000001" author="jhipster">
+
         <createTable tableName="jhi_user">
             <column name="id" type="bigint" autoIncrement="true" startWith="1050">
                 <constraints primaryKey="true" nullable="false"/>
@@ -126,7 +127,10 @@
             <column name="nationalite" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5c0d2dbebb29e6aa764dfbee5629ae581e0128a
             <column name="matricule" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>

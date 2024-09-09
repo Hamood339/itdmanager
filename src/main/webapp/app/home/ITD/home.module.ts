@@ -10,8 +10,14 @@ import { NotificationComponent } from './notification/notification.component';
 import { NotesComponent } from './etudiant/notes/notes.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ProfesseurComponent } from './professeur/professeur.component';
+<<<<<<< HEAD
 
 import { EmploiDuTempsComponent } from '../../emploi-du-temps/emploi-du-temps.component';
+=======
+import { CertificationsComponent } from './etudiant/certifications/certifications.component';
+import { EmpoiDuTempsComponent } from './etudiant/empoi-du-temps/empoi-du-temps.component';
+import { EmploiDuTempsComponent } from './etudiant/emploi-du-temps/emploi-du-temps.component';
+>>>>>>> f5c0d2dbebb29e6aa764dfbee5629ae581e0128a
 
 
 const routes: Routes = [
@@ -37,7 +43,7 @@ const routes: Routes = [
     AdministrationComponent,
     NotificationComponent,
     NotesComponent,
-    EtudiantComponent,
+    EmploiDuTempsComponent,
     BrowserModule,
     RouterModule.forRoot(routes),
     HomeComponent,

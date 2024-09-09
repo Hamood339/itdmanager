@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Transactional
-@Table(name = "etudiant")
+
 public  class Etudiant {
 
 

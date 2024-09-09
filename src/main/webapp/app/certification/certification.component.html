@@ -1,0 +1,22 @@
+<div *ngIf="certifications.length > 0; else noData">
+  <h2>Progression des Certifications</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Étudiant</th>
+      <th>Certification</th>
+      <th>Progrès</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cert of certifications">
+      <td>{{ cert.studentName }}</td>
+      <td>{{ cert.certificationName }}</td>
+      <td>{{ cert.progress }}%</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noData>
+  <p>Aucune donnée disponible.</p>
+</ng-template>

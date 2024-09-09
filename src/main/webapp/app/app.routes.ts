@@ -14,7 +14,9 @@ import { NotificationComponent } from './home/ITD/notification/notification.comp
 import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
 
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
-import { EmploiDuTempsComponent } from './emploi-du-temps/emploi-du-temps.component';
+import { CertificationsComponent } from './home/ITD/etudiant/certifications/certifications.component';
+import { EmploiDuTempsComponent } from './home/ITD/etudiant/emploi-du-temps/emploi-du-temps.component';
+
 
 
 const routes: Routes = [
