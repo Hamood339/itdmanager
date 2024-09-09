@@ -15,7 +15,7 @@ import { NotesComponent } from './home/ITD/etudiant/notes/notes.component';
 
 import { ProfesseurComponent } from './home/ITD/professeur/professeur.component';
 import { CertificationsComponent } from './home/ITD/etudiant/certifications/certifications.component';
-import { EmploiDuTempsComponent } from './home/ITD/etudiant/emploi-du-temps/emploi-du-temps.component';
+
 
 
 
@@ -84,11 +84,7 @@ const routes: Routes = [
     component: EtudiantComponent,
     title: 'Espace Etudiant',
   },
-  {
-    path: 'emploi',
-    component: EmploiDuTempsComponent,
-    title: 'emploi du temps',
-  },
+
 
 
   {
