@@ -17,7 +17,8 @@ public class ApplicationProperties {
 Créez une classe Java pour charger les propriétés définies dans application.yml.
 
 Créez ApplicationProperties.java dans src/main/java/com/yourcompany/config :*/
-    private String uploadDir;
+   private String uploadDir;
+
 
     public String getUploadDir() {
         return uploadDir;

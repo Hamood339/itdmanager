@@ -4,11 +4,7 @@ import { AccountService } from '../../../../core/auth/account.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 import {FormsModule} from "@angular/forms";
-<<<<<<< HEAD
-import {NgForOf} from "@angular/common";
-=======
 import { NgForOf } from '@angular/common';
->>>>>>> f5c0d2dbebb29e6aa764dfbee5629ae581e0128a
 
 @Component({
   selector: 'jhi-notes',

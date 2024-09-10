@@ -109,6 +109,7 @@
         </createTable>
 
         <createTable tableName="etudiant">
+
             <column name="id" type="bigint" autoIncrement="true" >
                 <constraints nullable="false" unique="true" primaryKey="true"/>
             </column>
@@ -127,10 +128,6 @@
             <column name="nationalite" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
-<<<<<<< HEAD
-
-=======
->>>>>>> f5c0d2dbebb29e6aa764dfbee5629ae581e0128a
             <column name="matricule" type="varchar(50)">
                 <constraints nullable="false" unique="true"/>
             </column>
