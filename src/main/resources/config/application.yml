@@ -216,3 +216,4 @@ jhipster:
 application:
   upload-dir: uploads/  # Définit le répertoire de téléchargement des cours
 
+

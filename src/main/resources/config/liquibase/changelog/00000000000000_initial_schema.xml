@@ -187,13 +187,7 @@
             tableName="etudiant"
             usePreparedStatements="true">
         </loadData>
-        <loadData
-            file="config/liquibase/data/etudiant.csv"
-            separator=";"
-            tableName="etudiant"
-            usePreparedStatements="true">
 
-        </loadData>
         <loadData
                   file="config/liquibase/data/user_authority.csv"
                   separator=";"
