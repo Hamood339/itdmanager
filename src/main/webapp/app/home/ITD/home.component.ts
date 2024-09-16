@@ -10,10 +10,6 @@ import { Account } from 'app/core/auth/account.model';
 import LoginComponent from '../../login/login.component';
 
 
-
-
-
-
 @Component({
   standalone: true,
   selector: 'jhi-home',
@@ -28,6 +24,10 @@ export default class HomeComponent implements OnInit, OnDestroy {
 
   protected accountService = inject(AccountService);
   private router = inject(Router);
+
+  title="Bienvenue à l'Institut des Technologies du Digital!";
+  description="former,pour transformer les talents en leaders!"
+
 
 
 
